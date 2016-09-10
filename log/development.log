@@ -1038,3 +1038,6 @@ Did you mean?  artist_url):
   [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
   [1m[35mSQL (2.2ms)[0m  INSERT INTO "songs" ("title", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "San Quentin"], ["artist_id", 7], ["created_at", "2016-09-09 20:40:28.014069"], ["updated_at", "2016-09-09 20:40:28.014069"]]
   [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mArtist Load (0.2ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mSong Load (0.9ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 7]]
+  [1m[35mSong Load (0.3ms)[0m  SELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?  [["artist_id", 7]]

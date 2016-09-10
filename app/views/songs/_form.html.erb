@@ -1,6 +1,6 @@
-<%= form_for @song  do |f| %>
+<%= form_for @song do |f| %>
   <!-- <%= link_to 'New Song', new_artist_song_path(@song.artist, @song) if @song.artist %> -->
-   <%= artist_select(@song) %>
+   <%= artist_select(params[:artist_id], @song) %>
   <%= f.label :title %>
   <%= f.text_field :title %><br>
   <%= f.label :artist_name %>
